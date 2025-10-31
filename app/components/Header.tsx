@@ -127,19 +127,22 @@ export default function Header({ lang, setLang }: HeaderProps) {
           >
             <div className="relative w-6 h-5 flex flex-col justify-center gap-1.5">
               <span 
-                className={`absolute top-0 left-0 w-full h-0.5 bg-yellow-400 rounded-full transition-all duration-300 ${
+                className={`absolute top-0 left-0 w-full h-0.5 rounded-full transition-all duration-300 ${
                   mobileMenuOpen ? 'rotate-45 top-2' : ''
                 }`}
+                style={{ backgroundColor: '#fff1b8' }}
               ></span>
               <span 
-                className={`absolute top-2 left-0 w-full h-0.5 bg-yellow-400 rounded-full transition-all duration-300 ${
+                className={`absolute top-2 left-0 w-full h-0.5 rounded-full transition-all duration-300 ${
                   mobileMenuOpen ? 'opacity-0' : 'opacity-100'
                 }`}
+                style={{ backgroundColor: '#fff1b8' }}
               ></span>
               <span 
-                className={`absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400 rounded-full transition-all duration-300 ${
+                className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full transition-all duration-300 ${
                   mobileMenuOpen ? '-rotate-45 bottom-2' : ''
                 }`}
+                style={{ backgroundColor: '#fff1b8' }}
               ></span>
             </div>
           </button>
@@ -240,7 +243,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m-2.716 0A8.95 8.95 0 0112 21a8.95 8.95 0 01-6-2.747M12 21a8.95 8.95 0 006-2.747M12 21a8.95 8.95 0 01-6-2.747m12 0A8.959 8.959 0 003 12c0-.778.099-1.533.284-2.253m2.716 0A8.95 8.95 0 0112 3a8.95 8.95 0 016 2.747M12 3a8.95 8.95 0 00-6 2.747" />
                         </svg>
                       </div>
-                      <p className={`text-sm font-bold ${isRTL ? 'font-arabic' : ''}`}>
+                      <p className={`text-sm font-bold text-black ${isRTL ? 'font-arabic' : ''}`}>
                         {lang === 'ar' ? 'اللغة' : 'Language'}
                       </p>
                     </div>
