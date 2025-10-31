@@ -14,7 +14,7 @@ interface Advantage {
 
 const translations = {
   ar: {
-    sectionTitle: 'المنيو الالكتروني الاول',
+    sectionTitle: 'المزايا',
     advantages: [
       {
         title: 'رمز شريطي ذكي رقمي',
