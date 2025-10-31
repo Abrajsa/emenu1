@@ -22,22 +22,10 @@ function OurWorkContent() {
 
   const works = [
     {
-      nameAr: 'مطعم بلاميدا',
-      nameEn: 'Blameda Restaurant',
-      url: 'https://blameda.emenu1.com',
-      imageUrl: '/WhatsApp-Image-2021-01-31-at-3.45.07-PM-2.webp',
-    },
-    {
       nameAr: 'ليالي الشامية',
       nameEn: 'Layali Al Shamiah',
       url: 'https://lyalishamih.emenu1.com',
       imageUrl: '/ly.webp',
-    },
-    {
-      nameAr: 'مطاعم وفطائر ابن الوزير',
-      nameEn: 'Ibn Al Wazir Restaurants & Pastries',
-      url: 'https://ibnalwzir.emenu1.com',
-      imageUrl: '/fatar.webp',
     },
     {
       nameAr: 'مطعم الفيشاوي',
@@ -46,40 +34,10 @@ function OurWorkContent() {
       imageUrl: '/fesh.webp',
     },
     {
-      nameAr: 'واي ات للحلويات',
-      nameEn: 'Y-It Sweets',
-      url: 'https://y-it.emenu1.com',
-      imageUrl: '/yit.webp',
-    },
-    {
-      nameAr: 'فيس تو فيس',
-      nameEn: 'Face 2 Face',
-      url: 'https://face2face.emenu1.com',
-      imageUrl: '/face2face.webp',
-    },
-    {
-      nameAr: 'العسيري كافية',
-      nameEn: 'Al Asiri Cafe',
-      url: 'https://alasiricafe.emenu1.com',
-      imageUrl: 'alisri.webp',
-    },
-    {
-      nameAr: 'مطعم حكاية طبق',
-      nameEn: 'Hikyat Tabk Restaurant',
-      url: 'https://hikyatabk.emenu1.com',
-      imageUrl: '/hkaiatabak.webp',
-    },
-    {
       nameAr: 'مطعم فخر الشامية',
       nameEn: 'Fakhr Al Shamiah Restaurant',
       url: 'https://fkhr.emenu1.com',
       imageUrl: '/alshmasih.webp',
-    },
-    {
-      nameAr: 'مقهى تو قو',
-      nameEn: '2OG Cafe',
-      url: 'https://2og.emenu1.com',
-      imageUrl: '/2og.webp',
     },
   ];
 
