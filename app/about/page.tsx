@@ -128,8 +128,8 @@ function AboutContent() {
                 }`}
               >
                 {lang === 'ar'
-                  ? 'جاهز لبدء رحلتك الرقمية معنا؟'
-                  : 'Ready to Start Your Digital Journey with Us?'}
+                  ? 'أبهر عملاءك بمنيو إلكتروني ذكي يجذبهم للطلب فورً'
+                  : 'Impress your customers with a smart electronic menu that attracts them to order immediately'}
               </h2>
               <p
                 className={`text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed ${
@@ -137,8 +137,8 @@ function AboutContent() {
                 }`}
               >
                 {lang === 'ar'
-                  ? 'احصل على المنيو الالكتروني الخاص بك الآن وارتق بمطعمك أو مقهاك إلى المستوى التالي'
-                  : 'Get your electronic menu now and elevate your restaurant or café to the next level'}
+                  ? 'كسب رضا عملائك بمنيو إلكتروني يسهّل عليهم الاختيار ويجعل تجربتهم أمتع.'
+                  : 'Gain customer satisfaction with an electronic menu that makes it easier for them to choose and makes their experience more enjoyable.'}
               </p>
               <a
                 href="https://new-mall.com/onBOBnV"
