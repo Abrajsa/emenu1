@@ -37,13 +37,13 @@ function AboutContent() {
           {/* Page Title */}
           <div className="text-center mb-12">
             <h1
-              className={`text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4 ${
+              className={`text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-4 ${
                 isRTL ? 'font-arabic' : ''
               }`}
             >
               {t.pageTitle}
             </h1>
-            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-black mx-auto rounded-full"></div>
           </div>
 
           <div className="max-w-5xl mx-auto">
@@ -62,61 +62,57 @@ function AboutContent() {
               </div>
 
               {/* Content */}
-              <div className="order-1 lg:order-2 space-y-6">
+              <div className="order-1 lg:order-2">
                 <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg">
                   <p
-                    className={`text-lg sm:text-xl text-gray-700 leading-relaxed mb-6 ${
+                    className={`text-lg sm:text-xl text-black leading-relaxed mb-6 ${
                       isRTL ? 'font-arabic' : ''
                     }`}
                   >
                     {t.paragraph1}
                   </p>
                   <p
-                    className={`text-lg sm:text-xl text-gray-700 leading-relaxed mb-6 ${
+                    className={`text-lg sm:text-xl text-black leading-relaxed mb-6 ${
                       isRTL ? 'font-arabic' : ''
                     }`}
                   >
                     {t.paragraph2}
                   </p>
+                  <p
+                    className={`text-lg sm:text-xl text-black leading-relaxed mb-6 ${
+                      isRTL ? 'font-arabic' : ''
+                    }`}
+                  >
+                    {t.paragraph3}
+                  </p>
+                  <p
+                    className={`text-lg sm:text-xl text-black leading-relaxed font-semibold ${
+                      isRTL ? 'font-arabic' : ''
+                    }`}
+                  >
+                    {t.paragraph4}
+                  </p>
                 </div>
               </div>
-            </div>
-
-            {/* Additional Content */}
-            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg">
-              <p
-                className={`text-lg sm:text-xl text-gray-700 leading-relaxed mb-6 ${
-                  isRTL ? 'font-arabic' : ''
-                }`}
-              >
-                {t.paragraph3}
-              </p>
-              <p
-                className={`text-lg sm:text-xl text-gray-700 leading-relaxed font-semibold ${
-                  isRTL ? 'font-arabic' : ''
-                }`}
-              >
-                {t.paragraph4}
-              </p>
             </div>
 
             {/* Stats Section */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
               <div className="bg-white rounded-xl p-6 text-center shadow-lg">
-                <div className="text-4xl sm:text-5xl font-bold text-yellow-500 mb-2">10+</div>
-                <p className={`text-gray-600 ${isRTL ? 'font-arabic' : ''}`}>
+                <div className="text-4xl sm:text-5xl font-bold text-black mb-2">10+</div>
+                <p className={`text-black ${isRTL ? 'font-arabic' : ''}`}>
                   {lang === 'ar' ? 'سنوات من الخبرة' : 'Years of Experience'}
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 text-center shadow-lg">
-                <div className="text-4xl sm:text-5xl font-bold text-yellow-500 mb-2">100+</div>
-                <p className={`text-gray-600 ${isRTL ? 'font-arabic' : ''}`}>
+                <div className="text-4xl sm:text-5xl font-bold text-black mb-2">100+</div>
+                <p className={`text-black ${isRTL ? 'font-arabic' : ''}`}>
                   {lang === 'ar' ? 'عميل سعيد' : 'Happy Clients'}
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 text-center shadow-lg">
-                <div className="text-4xl sm:text-5xl font-bold text-yellow-500 mb-2">1000+</div>
-                <p className={`text-gray-600 ${isRTL ? 'font-arabic' : ''}`}>
+                <div className="text-4xl sm:text-5xl font-bold text-black mb-2">1000+</div>
+                <p className={`text-black ${isRTL ? 'font-arabic' : ''}`}>
                   {lang === 'ar' ? 'قائمة رقمية' : 'Digital Menus'}
                 </p>
               </div>
