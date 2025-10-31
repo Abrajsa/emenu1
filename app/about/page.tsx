@@ -118,6 +118,38 @@ function AboutContent() {
               </div>
             </div>
           </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 sm:mt-20 lg:mt-24 max-w-4xl mx-auto">
+            <div className="bg-black rounded-2xl p-8 sm:p-12 lg:p-16 text-center shadow-2xl">
+              <h2
+                className={`text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 ${
+                  isRTL ? 'font-arabic' : ''
+                }`}
+              >
+                {lang === 'ar'
+                  ? 'جاهز لبدء رحلتك الرقمية معنا؟'
+                  : 'Ready to Start Your Digital Journey with Us?'}
+              </h2>
+              <p
+                className={`text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed ${
+                  isRTL ? 'font-arabic' : ''
+                }`}
+              >
+                {lang === 'ar'
+                  ? 'احصل على المنيو الالكتروني الخاص بك الآن وارتق بمطعمك أو مقهاك إلى المستوى التالي'
+                  : 'Get your electronic menu now and elevate your restaurant or café to the next level'}
+              </p>
+              <a
+                href="https://new-mall.com/onBOBnV"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-yellow-500 text-black text-lg sm:text-xl font-bold rounded-full shadow-2xl hover:bg-yellow-400 transform hover:scale-105 transition-all duration-300"
+              >
+                {lang === 'ar' ? 'اطلب الآن' : 'Order Now'}
+              </a>
+            </div>
+          </div>
         </div>
       </main>
 

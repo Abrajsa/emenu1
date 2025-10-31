@@ -4,10 +4,10 @@ import nodemailer from 'nodemailer';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, subject, message } = body;
+    const { name, email, message } = body;
 
     // Validate input
-    if (!name || !email || !subject || !message) {
+    if (!name || !email || !message) {
       return NextResponse.json(
         { error: 'All fields are required' },
         { status: 400 }
@@ -28,12 +28,11 @@ export async function POST(request: NextRequest) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'abrajsa@gmail.com',
-      subject: `Contact Form: ${subject}`,
+      subject: `Contact Form from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
       `,
@@ -42,7 +41,6 @@ export async function POST(request: NextRequest) {
         
         Name: ${name}
         Email: ${email}
-        Subject: ${subject}
         
         Message:
         ${message}

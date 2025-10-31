@@ -10,7 +10,6 @@ function ContactContent() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -74,7 +73,7 @@ function ContactContent() {
 
       if (response.ok) {
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormData({ name: '', email: '', message: '' });
       } else {
         setSubmitStatus('error');
       }
@@ -191,7 +190,7 @@ function ContactContent() {
                   <div>
                     <label
                       htmlFor="name"
-                      className={`block text-sm font-medium text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
+                      className={`block text-sm font-bold text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
                     >
                       {t.name}
                     </label>
@@ -201,14 +200,14 @@ function ContactContent() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="email"
-                      className={`block text-sm font-medium text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
+                      className={`block text-sm font-bold text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
                     >
                       {t.email}
                     </label>
@@ -218,31 +217,14 @@ function ContactContent() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="subject"
-                      className={`block text-sm font-medium text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
-                    >
-                      {t.subject}
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      required
-                      value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="message"
-                      className={`block text-sm font-medium text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
+                      className={`block text-sm font-bold text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
                     >
                       {t.message}
                     </label>
@@ -252,7 +234,7 @@ function ContactContent() {
                       rows={6}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors resize-none"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors resize-none"
                     />
                   </div>
 
