@@ -84,7 +84,7 @@ function ContactContent() {
     <div className={`min-h-screen ${lang === 'ar' ? 'rtl' : 'ltr'}`} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
       <Header lang={lang} setLang={setLang} />
       
-      <main className="w-full py-12 sm:py-16 lg:py-20 bg-yellow-50">
+      <main className="w-full py-12 sm:py-16 lg:py-20" style={{ backgroundColor: '#fcfbf6' }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Page Title */}
           <div className="text-center mb-12">
