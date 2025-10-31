@@ -64,18 +64,24 @@ function ContactContent() {
     setSubmitStatus('idle');
 
     try {
-      // Create mailto link or use API route
-      const mailtoLink = `mailto:info@emenu1.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
-      window.location.href = mailtoLink;
-      
-      // Simulate success (since mailto doesn't provide feedback)
-      setTimeout(() => {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
         setSubmitStatus('success');
-        setIsSubmitting(false);
         setFormData({ name: '', email: '', subject: '', message: '' });
-      }, 500);
+      } else {
+        setSubmitStatus('error');
+      }
     } catch (error) {
+      console.error('Error submitting form:', error);
       setSubmitStatus('error');
+    } finally {
       setIsSubmitting(false);
     }
   };
@@ -113,7 +119,7 @@ function ContactContent() {
                 <div className="bg-white rounded-lg p-6 shadow-md">
                   <div className="flex items-center gap-4 mb-2">
                     <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
@@ -123,7 +129,7 @@ function ContactContent() {
                       </h3>
                       <a
                         href="mailto:info@emenu1.com"
-                        className="text-yellow-500 hover:text-yellow-600 transition-colors"
+                        className="text-black hover:text-gray-700 transition-colors"
                       >
                         info@emenu1.com
                       </a>
@@ -134,7 +140,7 @@ function ContactContent() {
                 <div className="bg-white rounded-lg p-6 shadow-md">
                   <div className="flex items-center gap-4 mb-2">
                     <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
@@ -144,7 +150,7 @@ function ContactContent() {
                       </h3>
                       <a
                         href="tel:0551781111"
-                        className="text-yellow-500 hover:text-yellow-600 transition-colors"
+                        className="text-black hover:text-gray-700 transition-colors"
                       >
                         0551781111
                       </a>
@@ -195,7 +201,7 @@ function ContactContent() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors"
                     />
                   </div>
 
@@ -212,7 +218,7 @@ function ContactContent() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors"
                     />
                   </div>
 
@@ -229,7 +235,7 @@ function ContactContent() {
                       required
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors"
                     />
                   </div>
 
@@ -246,7 +252,7 @@ function ContactContent() {
                       rows={6}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors resize-none"
                     />
                   </div>
 
