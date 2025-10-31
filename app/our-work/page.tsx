@@ -90,7 +90,7 @@ function OurWorkContent() {
     <div className={`min-h-screen ${lang === 'ar' ? 'rtl' : 'ltr'}`} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
       <Header lang={lang} setLang={setLang} />
       
-      <main className="w-full py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-orange-50 via-amber-50 to-red-50">
+      <main className="w-full py-12 sm:py-16 lg:py-20 bg-yellow-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Page Title */}
           <div className="text-center mb-12">
@@ -106,7 +106,7 @@ function OurWorkContent() {
             >
               {t.subtitle}
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-orange-600 to-red-600 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
           </div>
 
           {/* Works Grid */}

@@ -62,13 +62,13 @@ export default function Hero({ lang }: HeroProps) {
             whileHover={{ 
               scale: 1.1,
               y: -5,
-              boxShadow: '0 20px 40px rgba(249, 115, 22, 0.4)',
+              boxShadow: '0 20px 40px rgba(234, 179, 8, 0.4)',
             }}
             whileTap={{ scale: 0.95 }}
             style={{
               transition: 'none'
             }}
-            className="inline-block mt-4 sm:mt-8 px-6 py-3 sm:px-10 sm:py-5 bg-gradient-to-r from-orange-600 to-red-600 text-white text-base sm:text-lg md:text-xl font-bold rounded-full shadow-2xl cursor-pointer"
+            className="inline-block mt-4 sm:mt-8 px-6 py-3 sm:px-10 sm:py-5 bg-yellow-500 text-black text-base sm:text-lg md:text-xl font-bold rounded-full shadow-2xl cursor-pointer hover:bg-yellow-400 transition-colors"
           >
             {t.orderNow}
           </motion.a>

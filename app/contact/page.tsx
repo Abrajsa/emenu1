@@ -84,7 +84,7 @@ function ContactContent() {
     <div className={`min-h-screen ${lang === 'ar' ? 'rtl' : 'ltr'}`} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
       <Header lang={lang} setLang={setLang} />
       
-      <main className="w-full py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-orange-50 via-amber-50 to-red-50">
+      <main className="w-full py-12 sm:py-16 lg:py-20 bg-yellow-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Page Title */}
           <div className="text-center mb-12">
@@ -95,7 +95,7 @@ function ContactContent() {
             >
               {t.pageTitle}
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-orange-600 to-red-600 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
@@ -112,8 +112,8 @@ function ContactContent() {
               <div className="space-y-6 mb-8">
                 <div className="bg-white rounded-lg p-6 shadow-md">
                   <div className="flex items-center gap-4 mb-2">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-red-100 rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
@@ -123,7 +123,7 @@ function ContactContent() {
                       </h3>
                       <a
                         href="mailto:info@emenu1.com"
-                        className="text-orange-600 hover:text-orange-700 transition-colors"
+                        className="text-yellow-500 hover:text-yellow-600 transition-colors"
                       >
                         info@emenu1.com
                       </a>
@@ -133,8 +133,8 @@ function ContactContent() {
 
                 <div className="bg-white rounded-lg p-6 shadow-md">
                   <div className="flex items-center gap-4 mb-2">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-red-100 rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
@@ -144,7 +144,7 @@ function ContactContent() {
                       </h3>
                       <a
                         href="tel:0551781111"
-                        className="text-orange-600 hover:text-orange-700 transition-colors"
+                        className="text-yellow-500 hover:text-yellow-600 transition-colors"
                       >
                         0551781111
                       </a>
@@ -195,7 +195,7 @@ function ContactContent() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
                     />
                   </div>
 
@@ -212,7 +212,7 @@ function ContactContent() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
                     />
                   </div>
 
@@ -229,7 +229,7 @@ function ContactContent() {
                       required
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
                     />
                   </div>
 
@@ -246,7 +246,7 @@ function ContactContent() {
                       rows={6}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors resize-none"
                     />
                   </div>
 
@@ -265,7 +265,7 @@ function ContactContent() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg shadow-lg hover:shadow-xl hover:bg-yellow-400 transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     {isSubmitting ? t.sending : t.send}
                   </button>
@@ -288,5 +288,6 @@ export default function ContactPage() {
     </LanguageProvider>
   );
 }
+
 
 

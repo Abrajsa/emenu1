@@ -67,7 +67,7 @@ export default function Footer({ lang }: FooterProps) {
             <div className="space-y-3">
               <a
                 href="mailto:info@emenu1.com"
-                className="flex items-center gap-2 text-gray-400 hover:text-orange-400 transition-colors"
+                className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -76,7 +76,7 @@ export default function Footer({ lang }: FooterProps) {
               </a>
               <a
                 href="tel:0551781111"
-                className="flex items-center gap-2 text-gray-400 hover:text-orange-400 transition-colors"
+                className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -94,7 +94,7 @@ export default function Footer({ lang }: FooterProps) {
             <div className="space-y-3">
               <Link
                 href="/contact"
-                className="block text-gray-400 hover:text-orange-400 transition-colors"
+                className="block text-gray-400 hover:text-yellow-400 transition-colors"
               >
                 {t.contactUs}
               </Link>
@@ -102,7 +102,7 @@ export default function Footer({ lang }: FooterProps) {
                 href={orderUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-gray-400 hover:text-orange-400 transition-colors"
+                className="block text-gray-400 hover:text-yellow-400 transition-colors"
               >
                 {t.orderNow}
               </a>
@@ -123,7 +123,7 @@ export default function Footer({ lang }: FooterProps) {
                   href="https://www.facebook.com/emenu1com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
                   aria-label="Facebook"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -134,7 +134,7 @@ export default function Footer({ lang }: FooterProps) {
                   href="https://www.instagram.com/emenu1/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
                   aria-label="Instagram"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -145,7 +145,7 @@ export default function Footer({ lang }: FooterProps) {
                   href="https://x.com/emenu1com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
                   aria-label="X"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -167,7 +167,7 @@ export default function Footer({ lang }: FooterProps) {
                   href="https://www.tiktok.com/@emenuu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
                   aria-label="TikTok"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -178,7 +178,7 @@ export default function Footer({ lang }: FooterProps) {
                   href="https://www.youtube.com/@emnu839"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
                   aria-label="YouTube"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
