@@ -64,7 +64,7 @@ function OurWorkContent() {
             >
               {t.subtitle}
             </p>
-            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full mb-4"></div>
+            <div className="w-24 h-1 bg-black mx-auto rounded-full mb-4"></div>
             <p className={`text-base sm:text-lg text-black ${isRTL ? 'font-arabic' : ''}`}>
               {lang === 'ar' ? 'لمشاهدة المنيو اضغط على الصورة' : 'Click on the image to view the menu'}
             </p>

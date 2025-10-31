@@ -200,7 +200,7 @@ function ContactContent() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors"
+                      className="w-full px-3 py-2 border border-gray-200 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors"
                     />
                   </div>
 
@@ -217,7 +217,7 @@ function ContactContent() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors"
+                      className="w-full px-3 py-2 border border-gray-200 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors"
                     />
                   </div>
 
@@ -234,7 +234,7 @@ function ContactContent() {
                       rows={6}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors resize-none"
+                      className="w-full px-3 py-2 border border-gray-200 rounded-lg text-black focus:ring-2 focus:ring-blue-300 focus:border-blue-300 transition-colors resize-none"
                     />
                   </div>
 
