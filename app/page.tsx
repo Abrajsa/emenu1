@@ -11,7 +11,7 @@ function HomeContent() {
   const { lang, setLang } = useLanguage();
 
   return (
-    <div className={`min-h-screen ${lang === 'ar' ? 'rtl' : 'ltr'}`} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+    <div className={`min-h-screen ${lang === 'ar' ? 'rtl' : 'ltr'}`} style={{ backgroundColor: '#fcfbf6' }} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
       <Header lang={lang} setLang={setLang} />
       <Hero lang={lang} />
       <Advantages lang={lang} />

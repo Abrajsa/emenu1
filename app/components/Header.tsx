@@ -127,17 +127,17 @@ export default function Header({ lang, setLang }: HeaderProps) {
           >
             <div className="relative w-6 h-5 flex flex-col justify-center gap-1.5">
               <span 
-                className={`absolute top-0 left-0 w-full h-0.5 bg-yellow-500 rounded-full transition-all duration-300 ${
+                className={`absolute top-0 left-0 w-full h-0.5 bg-yellow-400 rounded-full transition-all duration-300 ${
                   mobileMenuOpen ? 'rotate-45 top-2' : ''
                 }`}
               ></span>
               <span 
-                className={`absolute top-2 left-0 w-full h-0.5 bg-yellow-500 rounded-full transition-all duration-300 ${
+                className={`absolute top-2 left-0 w-full h-0.5 bg-yellow-400 rounded-full transition-all duration-300 ${
                   mobileMenuOpen ? 'opacity-0' : 'opacity-100'
                 }`}
               ></span>
               <span 
-                className={`absolute bottom-0 left-0 w-full h-0.5 bg-yellow-500 rounded-full transition-all duration-300 ${
+                className={`absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400 rounded-full transition-all duration-300 ${
                   mobileMenuOpen ? '-rotate-45 bottom-2' : ''
                 }`}
               ></span>

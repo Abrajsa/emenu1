@@ -157,7 +157,8 @@ export default function Advantages({ lang }: AdvantagesProps) {
 
   return (
     <section
-      className={`w-full py-16 sm:py-20 lg:py-24 bg-white ${isRTL ? 'rtl' : 'ltr'}`}
+      className={`w-full py-16 sm:py-20 lg:py-24 ${isRTL ? 'rtl' : 'ltr'}`}
+      style={{ backgroundColor: '#fcfbf6' }}
       dir={isRTL ? 'rtl' : 'ltr'}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
