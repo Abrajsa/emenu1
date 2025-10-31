@@ -101,19 +101,19 @@ function AboutContent() {
               <div className="bg-white rounded-xl p-6 text-center shadow-lg">
                 <div className="text-4xl sm:text-5xl font-bold text-black mb-2">10+</div>
                 <p className={`text-black ${isRTL ? 'font-arabic' : ''}`}>
-                  {lang === 'ar' ? ' اكثر من سنوات من الخبرة' : 'Years of Experience'}
-                </p>
-              </div>
-              <div className="bg-white rounded-xl p-6 text-center shadow-lg">
-                <div className="text-4xl sm:text-5xl font-bold text-black mb-2">1000</div>
-                <p className={`text-black ${isRTL ? 'font-arabic' : ''}`}>
-                  {lang === 'ar' ? ' اكثر من عميل سعيد' : 'Happy Clients'}
+                  {lang === 'ar' ? '  سنوات من الخبرة' : 'Years of Experience'}
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 text-center shadow-lg">
                 <div className="text-4xl sm:text-5xl font-bold text-black mb-2">1000+</div>
                 <p className={`text-black ${isRTL ? 'font-arabic' : ''}`}>
-                  {lang === 'ar' ? 'اكثر من منيو الكتروني' : 'Digital Menus'}
+                  {lang === 'ar' ? '  عميل سعيد' : 'Happy Clients'}
+                </p>
+              </div>
+              <div className="bg-white rounded-xl p-6 text-center shadow-lg">
+                <div className="text-4xl sm:text-5xl font-bold text-black mb-2">1000+</div>
+                <p className={`text-black ${isRTL ? 'font-arabic' : ''}`}>
+                  {lang === 'ar' ? ' منيو الكتروني' : 'Digital Menus'}
                 </p>
               </div>
             </div>
