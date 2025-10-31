@@ -122,7 +122,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-yellow-100 hover:bg-yellow-200 transition-all active:scale-95 shadow-sm hover:shadow-md"
+            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-black hover:bg-gray-900 transition-all active:scale-95 shadow-sm hover:shadow-md"
             aria-label="Toggle menu"
           >
             <div className="relative w-6 h-5 flex flex-col justify-center gap-1.5">
