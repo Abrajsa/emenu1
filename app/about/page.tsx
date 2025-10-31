@@ -123,7 +123,7 @@ function AboutContent() {
           <div className="mt-16 sm:mt-20 lg:mt-24 max-w-4xl mx-auto">
             <div className="bg-black rounded-2xl p-8 sm:p-12 lg:p-16 text-center shadow-2xl">
               <h2
-                className={`text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 ${
+                className={`text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 ${
                   isRTL ? 'font-arabic' : ''
                 }`}
               >

@@ -71,7 +71,7 @@ function OurWorkContent() {
           </div>
 
           {/* Works Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto mb-16">
             {works.map((work, index) => (
               <a
                 key={index}
@@ -87,6 +87,38 @@ function OurWorkContent() {
                 />
               </a>
             ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 sm:mt-20 lg:mt-24 max-w-4xl mx-auto">
+            <div className="bg-black rounded-2xl p-8 sm:p-12 lg:p-16 text-center shadow-2xl">
+              <h2
+                className={`text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 ${
+                  isRTL ? 'font-arabic' : ''
+                }`}
+              >
+                {lang === 'ar'
+                  ? 'أبهر عملاءك بمنيو إلكتروني ذكي يجذبهم للطلب فورً'
+                  : 'Impress your customers with a smart electronic menu that attracts them to order immediately'}
+              </h2>
+              <p
+                className={`text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed ${
+                  isRTL ? 'font-arabic' : ''
+                }`}
+              >
+                {lang === 'ar'
+                  ? 'كسب رضا عملائك بمنيو إلكتروني يسهّل عليهم الاختيار ويجعل تجربتهم أمتع.'
+                  : 'Gain customer satisfaction with an electronic menu that makes it easier for them to choose and makes their experience more enjoyable.'}
+              </p>
+              <a
+                href="https://new-mall.com/onBOBnV"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-yellow-500 text-black text-lg sm:text-xl font-bold rounded-full shadow-2xl hover:bg-yellow-400 transform hover:scale-105 transition-all duration-300"
+              >
+                {lang === 'ar' ? 'اطلب الآن' : 'Order Now'}
+              </a>
+            </div>
           </div>
         </div>
       </main>
