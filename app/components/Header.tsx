@@ -33,7 +33,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
 
   return (
     <header
-      className={`w-full bg-white shadow-md sticky top-0 z-50 ${
+      className={`w-full bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100 ${
         isRTL ? 'rtl font-arabic' : 'ltr'
       } ${!isRTL ? '[font-family:var(--font-poppins),Arial,Helvetica,sans-serif]' : ''}`}
       dir={isRTL ? 'rtl' : 'ltr'}
@@ -62,36 +62,36 @@ export default function Header({ lang, setLang }: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-4">
+          <nav className="hidden md:flex items-center gap-2">
             <a
               href={orderUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-colors font-bold group"
+              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-bold group rounded-lg"
             >
               {t.orderNow}
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100"></span>
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </a>
             <Link
               href="/about"
-              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-colors font-bold group"
+              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-bold group rounded-lg"
             >
               {t.aboutUs}
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100"></span>
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </Link>
             <Link
               href="/our-work"
-              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-colors font-bold group"
+              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-bold group rounded-lg"
             >
               {t.ourWork}
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100"></span>
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </Link>
             <Link
               href="/contact"
-              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-colors font-bold group"
+              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-bold group rounded-lg"
             >
               {t.contactUs}
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100"></span>
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </Link>
           </nav>
 
@@ -99,20 +99,20 @@ export default function Header({ lang, setLang }: HeaderProps) {
           <div className="hidden md:flex items-center gap-2">
             <button
               onClick={() => setLang('ar')}
-              className={`px-3 py-1 rounded-md text-sm font-bold transition-colors cursor-pointer ${
+              className={`px-4 py-2 rounded-lg text-sm font-bold transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105 ${
                 lang === 'ar'
-                  ? 'bg-yellow-500 text-black'
-                  : 'bg-black text-yellow-500 hover:bg-gray-900'
+                  ? 'bg-yellow-500 text-black hover:bg-yellow-400'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               عربي
             </button>
             <button
               onClick={() => setLang('en')}
-              className={`px-3 py-1 rounded-md text-sm font-bold transition-colors cursor-pointer ${
+              className={`px-4 py-2 rounded-lg text-sm font-bold transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105 ${
                 lang === 'en'
-                  ? 'bg-yellow-500 text-black'
-                  : 'bg-black text-yellow-500 hover:bg-gray-900'
+                  ? 'bg-yellow-500 text-black hover:bg-yellow-400'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               EN
@@ -167,7 +167,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
                 animate={{ x: 0 }}
                 exit={{ x: '100%' }}
                 transition={{ duration: 0.3, type: 'tween' }}
-                className="fixed top-0 bottom-0 right-0 w-64 sm:w-80 bg-white shadow-2xl z-50 md:hidden overflow-y-auto"
+                className="fixed top-0 bottom-0 right-0 w-64 sm:w-80 bg-white/95 backdrop-blur-md shadow-2xl z-50 md:hidden overflow-y-auto border-l border-gray-100"
               >
                 <div className="flex flex-col h-full py-8 px-6">
                   {/* Close Button */}

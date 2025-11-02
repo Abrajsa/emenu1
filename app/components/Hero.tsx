@@ -35,8 +35,8 @@ export default function Hero({ lang }: HeroProps) {
           backgroundImage: 'url(/heromenu.png)',
         }}
       >
-        {/* Overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* Gradient Overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60"></div>
       </div>
 
       {/* Hero Content */}
@@ -68,7 +68,7 @@ export default function Hero({ lang }: HeroProps) {
             style={{
               transition: 'none'
             }}
-            className="inline-block mt-4 sm:mt-8 px-6 py-3 sm:px-10 sm:py-5 bg-yellow-500 text-black text-base sm:text-lg md:text-xl font-bold rounded-full shadow-2xl cursor-pointer hover:bg-yellow-400 transition-colors"
+            className="inline-block mt-4 sm:mt-8 px-8 py-4 sm:px-12 sm:py-5 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black text-base sm:text-lg md:text-xl font-bold rounded-full shadow-2xl cursor-pointer hover:from-yellow-400 hover:to-yellow-300 transition-all duration-300 hover:shadow-yellow-500/50 hover:scale-105"
           >
             {t.orderNow}
           </motion.a>

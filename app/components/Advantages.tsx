@@ -194,16 +194,21 @@ export default function Advantages({ lang }: AdvantagesProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl p-6 sm:p-8 border border-gray-100 hover:border-yellow-200 transition-all duration-300 group"
+              className="bg-white rounded-xl shadow-md hover:shadow-2xl p-6 sm:p-8 border border-gray-100 hover:border-yellow-300 transition-all duration-300 group relative overflow-hidden"
             >
+              {/* Gradient background on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/0 to-yellow-50/0 group-hover:from-yellow-50/50 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
+              
               {/* Icon */}
-              <div className="mb-4 flex items-center justify-center w-16 h-16 bg-yellow-50 rounded-lg group-hover:bg-yellow-100 transition-colors duration-300">
-                {advantage.icon}
+              <div className="mb-4 flex items-center justify-center w-16 h-16 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg group-hover:from-yellow-100 group-hover:to-yellow-200 transition-all duration-300 relative z-10 shadow-sm group-hover:shadow-md">
+                <div className="group-hover:scale-110 transition-transform duration-300">
+                  {advantage.icon}
+                </div>
               </div>
 
               {/* Title */}
               <h3
-                className={`text-xl sm:text-2xl font-bold text-gray-900 mb-3 ${
+                className={`text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-yellow-700 transition-colors duration-300 relative z-10 ${
                   isRTL ? 'font-arabic' : ''
                 }`}
               >
@@ -212,7 +217,7 @@ export default function Advantages({ lang }: AdvantagesProps) {
 
               {/* Description */}
               <p
-                className={`text-gray-600 leading-relaxed text-sm sm:text-base ${
+                className={`text-gray-600 leading-relaxed text-sm sm:text-base group-hover:text-gray-700 transition-colors duration-300 relative z-10 ${
                   isRTL ? 'font-arabic' : ''
                 }`}
               >

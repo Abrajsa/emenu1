@@ -51,7 +51,7 @@ function OurWorkContent() {
       <main className="w-full py-12 sm:py-16 lg:py-20" style={{ backgroundColor: '#fcfbf6' }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Page Title */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h1
               className={`text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4 ${
                 isRTL ? 'font-arabic' : ''
@@ -64,8 +64,8 @@ function OurWorkContent() {
             >
               {t.subtitle}
             </p>
-            <div className="w-24 h-1 bg-black mx-auto rounded-full mb-4"></div>
-            <p className={`text-base sm:text-lg text-black ${isRTL ? 'font-arabic' : ''}`}>
+            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 mx-auto rounded-full shadow-md mb-4"></div>
+            <p className={`text-base sm:text-lg text-black font-medium ${isRTL ? 'font-arabic' : ''}`}>
               {lang === 'ar' ? 'لمشاهدة المنيو اضغط على الصورة' : 'Click on the image to view the menu'}
             </p>
           </div>
@@ -78,13 +78,21 @@ function OurWorkContent() {
                 href={work.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block overflow-hidden rounded-xl transition-all duration-300 transform hover:scale-105 group"
+                className="block relative overflow-hidden rounded-2xl transition-all duration-300 transform hover:scale-105 group shadow-lg hover:shadow-2xl"
               >
                 <img
                   src={work.imageUrl}
                   alt={lang === 'ar' ? work.nameAr : work.nameEn}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Restaurant Name */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className={`text-white font-bold text-lg ${isRTL ? 'font-arabic' : ''}`}>
+                    {lang === 'ar' ? work.nameAr : work.nameEn}
+                  </h3>
+                </div>
               </a>
             ))}
           </div>
@@ -114,7 +122,7 @@ function OurWorkContent() {
                 href="https://new-mall.com/onBOBnV"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-yellow-500 text-black text-lg sm:text-xl font-bold rounded-full shadow-2xl hover:bg-yellow-400 transform hover:scale-105 transition-all duration-300"
+                className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black text-lg sm:text-xl font-bold rounded-full shadow-2xl hover:from-yellow-400 hover:to-yellow-300 transform hover:scale-105 transition-all duration-300 hover:shadow-yellow-500/50"
               >
                 {lang === 'ar' ? 'اطلب الآن' : 'Order Now'}
               </a>

@@ -26,7 +26,7 @@ export default function MainText({ lang }: MainTextProps) {
     <section
       className={`w-full py-16 sm:py-20 lg:py-24 ${isRTL ? 'rtl' : 'ltr'}`}
       dir={isRTL ? 'rtl' : 'ltr'}
-      style={{ backgroundColor: '#000000' }}
+      style={{ backgroundColor: '#000000', background: 'linear-gradient(180deg, #000000 0%, #1a1a1a 100%)' }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
@@ -55,7 +55,7 @@ export default function MainText({ lang }: MainTextProps) {
               boxShadow: '0 20px 40px rgba(0, 0, 0, 0.2)',
             }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block px-10 py-5 bg-yellow-500 text-black text-lg sm:text-xl font-bold rounded-full shadow-2xl cursor-pointer hover:bg-yellow-400 transition-colors"
+            className="inline-block px-10 py-5 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black text-lg sm:text-xl font-bold rounded-full shadow-2xl cursor-pointer hover:from-yellow-400 hover:to-yellow-300 transition-all duration-300 hover:shadow-yellow-500/50 hover:scale-105"
           >
             {t.buttonText}
           </motion.a>
