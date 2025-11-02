@@ -56,7 +56,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
                 sizes="48px"
               />
             </div>
-            <h1 className="text-base sm:text-xl md:text-2xl font-bold text-black">
+            <h1 className="text-base sm:text-xl md:text-2xl font-extrabold text-black">
               {lang === 'ar' ? 'المنيو الالكتروني الاول' : 'The First Electronic Menu'}
             </h1>
           </Link>
@@ -67,28 +67,28 @@ export default function Header({ lang, setLang }: HeaderProps) {
               href={orderUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-bold group rounded-lg"
+              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-extrabold group rounded-lg"
             >
               {t.orderNow}
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </a>
             <Link
               href="/about"
-              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-bold group rounded-lg"
+              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-extrabold group rounded-lg"
             >
               {t.aboutUs}
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </Link>
             <Link
               href="/our-work"
-              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-bold group rounded-lg"
+              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-extrabold group rounded-lg"
             >
               {t.ourWork}
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </Link>
             <Link
               href="/contact"
-              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-bold group rounded-lg"
+              className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-extrabold group rounded-lg"
             >
               {t.contactUs}
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -99,7 +99,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
           <div className="hidden md:flex items-center gap-2">
             <button
               onClick={() => setLang('ar')}
-              className={`px-4 py-2 rounded-lg text-sm font-bold transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105 ${
+              className={`px-4 py-2 rounded-lg text-sm font-extrabold transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105 ${
                 lang === 'ar'
                   ? 'bg-yellow-500 text-black hover:bg-yellow-400'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -109,7 +109,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
             </button>
             <button
               onClick={() => setLang('en')}
-              className={`px-4 py-2 rounded-lg text-sm font-bold transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105 ${
+              className={`px-4 py-2 rounded-lg text-sm font-extrabold transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105 ${
                 lang === 'en'
                   ? 'bg-yellow-500 text-black hover:bg-yellow-400'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -187,7 +187,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
                       href={orderUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-4 px-5 py-4 text-black hover:text-yellow-600 hover:bg-yellow-50 transition-all font-bold rounded-xl group shadow-sm hover:shadow-md"
+                      className="flex items-center gap-4 px-5 py-4 text-black hover:text-yellow-600 hover:bg-yellow-50 transition-all font-extrabold rounded-xl group shadow-sm hover:shadow-md"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <div className="flex-shrink-0 w-6 h-6 text-yellow-500 group-hover:scale-110 transition-transform">
@@ -199,7 +199,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
                     </a>
                     <Link
                       href="/about"
-                      className="flex items-center gap-4 px-5 py-4 text-black hover:text-yellow-600 hover:bg-yellow-50 transition-all font-bold rounded-xl group shadow-sm hover:shadow-md"
+                      className="flex items-center gap-4 px-5 py-4 text-black hover:text-yellow-600 hover:bg-yellow-50 transition-all font-extrabold rounded-xl group shadow-sm hover:shadow-md"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <div className="flex-shrink-0 w-6 h-6 text-yellow-500 group-hover:scale-110 transition-transform">
@@ -211,7 +211,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
                     </Link>
                     <Link
                       href="/our-work"
-                      className="flex items-center gap-4 px-5 py-4 text-black hover:text-yellow-600 hover:bg-yellow-50 transition-all font-bold rounded-xl group shadow-sm hover:shadow-md"
+                      className="flex items-center gap-4 px-5 py-4 text-black hover:text-yellow-600 hover:bg-yellow-50 transition-all font-extrabold rounded-xl group shadow-sm hover:shadow-md"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <div className="flex-shrink-0 w-6 h-6 text-yellow-500 group-hover:scale-110 transition-transform">
@@ -223,7 +223,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
                     </Link>
                     <Link
                       href="/contact"
-                      className="flex items-center gap-4 px-5 py-4 text-black hover:text-yellow-600 hover:bg-yellow-50 transition-all font-bold rounded-xl group shadow-sm hover:shadow-md"
+                      className="flex items-center gap-4 px-5 py-4 text-black hover:text-yellow-600 hover:bg-yellow-50 transition-all font-extrabold rounded-xl group shadow-sm hover:shadow-md"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <div className="flex-shrink-0 w-6 h-6 text-yellow-500 group-hover:scale-110 transition-transform">
@@ -243,7 +243,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m-2.716 0A8.95 8.95 0 0112 21a8.95 8.95 0 01-6-2.747M12 21a8.95 8.95 0 006-2.747M12 21a8.95 8.95 0 01-6-2.747m12 0A8.959 8.959 0 003 12c0-.778.099-1.533.284-2.253m2.716 0A8.95 8.95 0 0112 3a8.95 8.95 0 016 2.747M12 3a8.95 8.95 0 00-6 2.747" />
                         </svg>
                       </div>
-                      <p className={`text-sm font-bold text-black ${isRTL ? 'font-arabic' : ''}`}>
+                      <p className={`text-sm font-extrabold text-black ${isRTL ? 'font-arabic' : ''}`}>
                         {lang === 'ar' ? 'اللغة' : 'Language'}
                       </p>
                     </div>
@@ -253,7 +253,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
                           setLang('ar');
                           setMobileMenuOpen(false);
                         }}
-                        className={`flex-1 px-4 py-3 rounded-xl text-sm font-bold transition-all cursor-pointer shadow-sm hover:shadow-md hover:scale-105 active:scale-95 ${
+                        className={`flex-1 px-4 py-3 rounded-xl text-sm font-extrabold transition-all cursor-pointer shadow-sm hover:shadow-md hover:scale-105 active:scale-95 ${
                           lang === 'ar'
                             ? 'bg-yellow-500 text-black'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -266,7 +266,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
                           setLang('en');
                           setMobileMenuOpen(false);
                         }}
-                        className={`flex-1 px-4 py-3 rounded-xl text-sm font-bold transition-all cursor-pointer shadow-sm hover:shadow-md hover:scale-105 active:scale-95 ${
+                        className={`flex-1 px-4 py-3 rounded-xl text-sm font-extrabold transition-all cursor-pointer shadow-sm hover:shadow-md hover:scale-105 active:scale-95 ${
                           lang === 'en'
                             ? 'bg-yellow-500 text-black'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
