@@ -20,7 +20,7 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "القائمة الإلكترونية الأولى | The First Electronic Menu",
+  title: "المنيو الإلكتروني الأول | إنشاء منيوّهات إلكترونية مميزة للمطاعم والمقاهي",
   description: "احصل على أفضل قائمة إلكترونية لرفع مستوى خدمتك وزيادة مبيعاتك | Get the best menu to elevate your service and increase your sales",
 };
 
