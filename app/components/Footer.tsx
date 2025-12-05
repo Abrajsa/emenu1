@@ -13,12 +13,14 @@ const translations = {
     orderNow: 'اطلب الآن',
     followUs: 'تابعنا',
     getInTouch: 'تواصل معنا',
+    contactUsForFeedback: 'راسلنا لأي ملاحظة',
   },
   en: {
     contactUs: 'Contact Us',
     orderNow: 'Order Now',
     followUs: 'Follow Us',
     getInTouch: 'Get in Touch',
+    contactUsForFeedback: 'Contact us for any feedback',
   },
 };
 
@@ -187,12 +189,20 @@ export default function Footer({ lang }: FooterProps) {
                 </a>
               </div>
             </div>
-            {/* Copyright */}
-            <p className={`text-gray-400 text-sm ${isRTL ? 'font-arabic' : ''}`}>
-              {lang === 'ar'
-                ? '© 2025 المنيو الالكتروني الاول. جميع الحقوق محفوظة.'
-                : '© 2025 The First Electronic Menu. All rights reserved.'}
-            </p>
+            {/* Contact for Feedback & Copyright */}
+            <div className="flex flex-col items-center gap-2">
+              <Link
+                href="/contact"
+                className={`text-yellow-400 hover:text-yellow-300 transition-colors text-sm font-medium underline ${isRTL ? 'font-arabic' : ''}`}
+              >
+                {t.contactUsForFeedback}
+              </Link>
+              <p className={`text-gray-400 text-sm ${isRTL ? 'font-arabic' : ''}`}>
+                {lang === 'ar'
+                  ? '© 2025 المنيو الالكتروني الاول. جميع الحقوق محفوظة.'
+                  : '© 2025 The First Electronic Menu. All rights reserved.'}
+              </p>
+            </div>
           </div>
         </div>
       </div>
