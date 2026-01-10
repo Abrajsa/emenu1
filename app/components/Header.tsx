@@ -157,14 +157,14 @@ export default function Header({ lang, setLang }: HeaderProps) {
             />
             {/* Sidebar */}
             <nav
-              className={`fixed top-0 bottom-0 w-[280px] sm:w-80 bg-white shadow-2xl z-50 md:hidden ${isRTL ? 'left-0 border-r-2' : 'right-0 border-l-2'} border-gray-300`}
+              className="fixed top-0 bottom-0 right-0 w-[280px] sm:w-80 bg-white shadow-2xl z-50 md:hidden border-l-2 border-gray-300"
               style={{ height: '100vh', overflowY: 'auto' }}
             >
                 <div className={`flex flex-col min-h-full py-6 px-5 ${isRTL ? 'rtl' : 'ltr'}`} dir={isRTL ? 'rtl' : 'ltr'}>
                   {/* Close Button */}
                   <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`${isRTL ? 'self-start' : 'self-end'} mb-8 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-yellow-100 text-gray-700 hover:text-yellow-600 transition-all hover:scale-110 active:scale-95`}
+                    className="self-end mb-8 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-yellow-100 text-gray-700 hover:text-yellow-600 transition-all hover:scale-110 active:scale-95"
                     aria-label="Close menu"
                   >
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
