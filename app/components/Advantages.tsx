@@ -202,7 +202,7 @@ export default function Advantages({ lang }: AdvantagesProps) {
               {/* Icon */}
               <div className="mb-4 flex items-center justify-center w-16 h-16 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg group-hover:from-yellow-100 group-hover:to-yellow-200 transition-all duration-300 relative z-10 shadow-sm group-hover:shadow-md">
                 <div className="group-hover:scale-110 transition-transform duration-300">
-                  {advantage.icon}
+                {advantage.icon}
                 </div>
               </div>
 

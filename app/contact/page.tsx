@@ -165,22 +165,22 @@ function ContactContent() {
                     <svg className="w-5 h-5 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    {t.businessHours}
-                  </h3>
+                  {t.businessHours}
+                </h3>
                   <p className={`text-gray-700 font-medium ${isRTL ? 'font-arabic' : ''}`}>
-                    {t.hours}
-                  </p>
+                  {t.hours}
+                </p>
                 </div>
                 <div>
                   <h3 className={`font-bold text-gray-900 mb-3 flex items-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
                     <svg className="w-5 h-5 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
-                    {t.responseTime}
-                  </h3>
+                  {t.responseTime}
+                </h3>
                   <p className={`text-gray-700 font-medium ${isRTL ? 'font-arabic' : ''}`}>
-                    {t.response}
-                  </p>
+                  {t.response}
+                </p>
                 </div>
               </div>
             </div>
