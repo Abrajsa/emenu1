@@ -27,7 +27,6 @@ const translations = {
 export default function Footer({ lang }: FooterProps) {
   const t = translations[lang];
   const isRTL = lang === 'ar';
-  const orderUrl = 'https://new-mall.com/onBOBnV';
 
   return (
     <footer
@@ -100,14 +99,12 @@ export default function Footer({ lang }: FooterProps) {
               >
                 {t.contactUs}
               </Link>
-              <a
-                href={orderUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/order-menu"
                 className="block text-gray-400 hover:text-yellow-400 transition-colors"
               >
                 {t.orderNow}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

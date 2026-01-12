@@ -198,19 +198,19 @@ function ContactContent() {
             {/* Contact Form */}
             <div>
               <h2
-                className={`text-2xl sm:text-3xl font-bold text-white mb-6 drop-shadow-md ${
+                className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-6 ${
                   isRTL ? 'font-arabic' : ''
                 }`}
               >
                 {t.contactForm}
               </h2>
               
-              <form onSubmit={handleSubmit} className="bg-white rounded-xl p-6 sm:p-8 shadow-lg border border-gray-100">
+              <form onSubmit={handleSubmit} className="bg-gray-200/95 rounded-xl p-6 sm:p-8 shadow-lg border border-gray-300">
                 <div className="space-y-5">
                   <div>
                     <label
                       htmlFor="name"
-                      className={`block text-sm font-bold text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
+                      className={`block text-sm font-bold text-gray-900 mb-2 ${isRTL ? 'font-arabic' : ''}`}
                     >
                       {t.name}
                     </label>
@@ -220,14 +220,14 @@ function ContactContent() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-black focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border-2 border-white rounded-lg text-gray-900 font-medium shadow-md focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-300 transition-all duration-300"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="email"
-                      className={`block text-sm font-bold text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
+                      className={`block text-sm font-bold text-gray-900 mb-2 ${isRTL ? 'font-arabic' : ''}`}
                     >
                       {t.email}
                     </label>
@@ -237,14 +237,14 @@ function ContactContent() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-black focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border-2 border-white rounded-lg text-gray-900 font-medium shadow-md focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-300 transition-all duration-300"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="message"
-                      className={`block text-sm font-bold text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
+                      className={`block text-sm font-bold text-gray-900 mb-2 ${isRTL ? 'font-arabic' : ''}`}
                     >
                       {t.message}
                     </label>
@@ -254,7 +254,7 @@ function ContactContent() {
                       rows={6}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-black focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-300 resize-none"
+                      className="w-full px-4 py-3 bg-white border-2 border-white rounded-lg text-gray-900 font-medium shadow-md focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-300 transition-all duration-300 resize-none"
                     />
                   </div>
 

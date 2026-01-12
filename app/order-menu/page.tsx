@@ -116,7 +116,7 @@ function OrderMenuContent() {
 
           {/* Order Form */}
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg border border-gray-100">
+            <div className="bg-gray-200/95 rounded-xl p-6 sm:p-8 shadow-lg border border-gray-300">
               <h2
                 className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-6 ${
                   isRTL ? 'font-arabic' : ''
@@ -130,7 +130,7 @@ function OrderMenuContent() {
                   <div>
                     <label
                       htmlFor="name"
-                      className={`block text-sm font-bold text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
+                      className={`block text-sm font-bold text-gray-900 mb-2 ${isRTL ? 'font-arabic' : ''}`}
                     >
                       {t.name}
                     </label>
@@ -140,14 +140,14 @@ function OrderMenuContent() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-black focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border-2 border-white rounded-lg text-gray-900 font-medium shadow-md focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-300 transition-all duration-300"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="phone"
-                      className={`block text-sm font-bold text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
+                      className={`block text-sm font-bold text-gray-900 mb-2 ${isRTL ? 'font-arabic' : ''}`}
                     >
                       {t.phone}
                     </label>
@@ -157,14 +157,14 @@ function OrderMenuContent() {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-black focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border-2 border-white rounded-lg text-gray-900 font-medium shadow-md focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-300 transition-all duration-300"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="email"
-                      className={`block text-sm font-bold text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
+                      className={`block text-sm font-bold text-gray-900 mb-2 ${isRTL ? 'font-arabic' : ''}`}
                     >
                       {t.email}
                     </label>
@@ -174,14 +174,14 @@ function OrderMenuContent() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-black focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border-2 border-white rounded-lg text-gray-900 font-medium shadow-md focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-300 transition-all duration-300"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="menuSpecifications"
-                      className={`block text-sm font-bold text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}
+                      className={`block text-sm font-bold text-gray-900 mb-2 ${isRTL ? 'font-arabic' : ''}`}
                     >
                       {t.menuSpecifications}
                     </label>
@@ -191,7 +191,7 @@ function OrderMenuContent() {
                       rows={8}
                       value={formData.menuSpecifications}
                       onChange={(e) => setFormData({ ...formData, menuSpecifications: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-black focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-300 resize-none"
+                      className="w-full px-4 py-3 bg-white border-2 border-white rounded-lg text-gray-900 font-medium shadow-md focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-300 transition-all duration-300 resize-none"
                       placeholder={lang === 'ar' ? 'اكتب مواصفات المنيو المطلوبة...' : 'Enter menu specifications required...'}
                     />
                   </div>
