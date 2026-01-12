@@ -69,3 +69,45 @@ html[dir="ltr"] body {
     padding-right: 2rem;
   }
 }
+
+/* Wood texture background */
+.wood-background {
+  background-color: #8B6F47;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(101, 67, 33, 0.1) 0%,
+      rgba(139, 111, 71, 0.1) 50%,
+      rgba(101, 67, 33, 0.1) 100%
+    );
+  background-size: 100% 100%, 100% 100%, 200% 200%;
+  position: relative;
+}
+
+.wood-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(139, 111, 71, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(101, 67, 33, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(160, 120, 80, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}

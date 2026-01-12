@@ -80,12 +80,21 @@ function OrderMenuContent() {
     <div className={`min-h-screen ${lang === 'ar' ? 'rtl' : 'ltr'}`} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
       <Header lang={lang} setLang={setLang} />
       
-      <main className="w-full py-12 sm:py-16 lg:py-20" style={{ backgroundColor: '#fcfbf6' }}>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <main 
+        className="w-full py-12 sm:py-16 lg:py-20 relative"
+        style={{
+          backgroundImage: 'url(/back.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Page Title */}
           <div className="text-center mb-16">
             <h1
-              className={`text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4 ${
+              className={`text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg ${
                 isRTL ? 'font-arabic' : ''
               }`}
             >
@@ -97,7 +106,7 @@ function OrderMenuContent() {
           {/* Description */}
           <div className="max-w-3xl mx-auto mb-12">
             <p
-              className={`text-lg sm:text-xl text-gray-700 text-center leading-relaxed ${
+              className={`text-lg sm:text-xl text-white text-center leading-relaxed drop-shadow-md ${
                 isRTL ? 'font-arabic' : ''
               }`}
             >

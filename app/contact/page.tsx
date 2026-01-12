@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
+import Link from 'next/link';
 import { LanguageProvider, useLanguage } from '../components/LanguageProvider';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -89,12 +90,21 @@ function ContactContent() {
     <div className={`min-h-screen ${lang === 'ar' ? 'rtl' : 'ltr'}`} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
       <Header lang={lang} setLang={setLang} />
       
-      <main className="w-full py-12 sm:py-16 lg:py-20" style={{ backgroundColor: '#fcfbf6' }}>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <main 
+        className="w-full py-12 sm:py-16 lg:py-20 relative"
+        style={{
+          backgroundImage: 'url(/back.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Page Title */}
           <div className="text-center mb-16">
             <h1
-              className={`text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4 ${
+              className={`text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg ${
                 isRTL ? 'font-arabic' : ''
               }`}
             >
@@ -107,7 +117,7 @@ function ContactContent() {
             {/* Contact Information */}
             <div>
               <h2
-                className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-6 ${
+                className={`text-2xl sm:text-3xl font-bold text-white mb-6 drop-shadow-md ${
                   isRTL ? 'font-arabic' : ''
                 }`}
               >
@@ -188,7 +198,7 @@ function ContactContent() {
             {/* Contact Form */}
             <div>
               <h2
-                className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-6 ${
+                className={`text-2xl sm:text-3xl font-bold text-white mb-6 drop-shadow-md ${
                   isRTL ? 'font-arabic' : ''
                 }`}
               >
@@ -293,14 +303,12 @@ function ContactContent() {
                   ? 'كسب رضا عملائك بمنيو إلكتروني يسهّل عليهم الاختيار ويجعل تجربتهم أمتع.'
                   : 'Gain customer satisfaction with an electronic menu that makes it easier for them to choose and makes their experience more enjoyable.'}
               </p>
-              <a
-                href="https://new-mall.com/onBOBnV"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/order-menu"
                 className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black text-lg sm:text-xl font-bold rounded-full shadow-2xl hover:from-yellow-400 hover:to-yellow-300 transform hover:scale-105 transition-all duration-300 hover:shadow-yellow-500/50"
               >
                 {lang === 'ar' ? 'اطلب الآن' : 'Order Now'}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
