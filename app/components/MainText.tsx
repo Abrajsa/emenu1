@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 interface MainTextProps {
   lang: 'ar' | 'en';
@@ -20,7 +21,6 @@ const translations = {
 export default function MainText({ lang }: MainTextProps) {
   const t = translations[lang];
   const isRTL = lang === 'ar';
-  const orderUrl = 'https://new-mall.com/onBOBnV';
 
   return (
     <section
@@ -41,10 +41,7 @@ export default function MainText({ lang }: MainTextProps) {
           >
             {t.ctaText}
           </motion.p>
-          <motion.a
-            href={orderUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -55,10 +52,14 @@ export default function MainText({ lang }: MainTextProps) {
               boxShadow: '0 20px 40px rgba(0, 0, 0, 0.2)',
             }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block px-10 py-5 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black text-lg sm:text-xl font-bold rounded-full shadow-2xl cursor-pointer hover:from-yellow-400 hover:to-yellow-300 transition-all duration-300 hover:shadow-yellow-500/50 hover:scale-105"
           >
-            {t.buttonText}
-          </motion.a>
+            <Link
+              href="/order-menu"
+              className="inline-block px-10 py-5 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black text-lg sm:text-xl font-bold rounded-full shadow-2xl cursor-pointer hover:from-yellow-400 hover:to-yellow-300 transition-all duration-300 hover:shadow-yellow-500/50 hover:scale-105"
+            >
+              {t.buttonText}
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>

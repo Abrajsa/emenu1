@@ -4,6 +4,7 @@ import { LanguageProvider, useLanguage } from '../components/LanguageProvider';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function AboutContent() {
   const { lang, setLang } = useLanguage();
@@ -140,14 +141,12 @@ function AboutContent() {
                   ? 'كسب رضا عملائك بمنيو إلكتروني يسهّل عليهم الاختيار ويجعل تجربتهم أمتع.'
                   : 'Gain customer satisfaction with an electronic menu that makes it easier for them to choose and makes their experience more enjoyable.'}
               </p>
-              <a
-                href="https://new-mall.com/onBOBnV"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/order-menu"
                 className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black text-lg sm:text-xl font-bold rounded-full shadow-2xl hover:from-yellow-400 hover:to-yellow-300 transform hover:scale-105 transition-all duration-300 hover:shadow-yellow-500/50"
               >
                 {lang === 'ar' ? 'اطلب الآن' : 'Order Now'}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
