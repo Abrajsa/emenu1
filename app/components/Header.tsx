@@ -28,7 +28,6 @@ export default function Header({ lang, setLang }: HeaderProps) {
   const t = translations[lang];
   const isRTL = lang === 'ar';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const orderUrl = 'https://new-mall.com/onBOBnV';
 
   return (
     <header
@@ -62,15 +61,13 @@ export default function Header({ lang, setLang }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-2">
-            <a
-              href={orderUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/order-menu"
               className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-extrabold group rounded-lg"
             >
               {t.orderNow}
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            </a>
+            </Link>
             <Link
               href="/about"
               className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 font-extrabold group rounded-lg"
@@ -174,10 +171,8 @@ export default function Header({ lang, setLang }: HeaderProps) {
 
                   {/* Navigation Links */}
                   <div className="flex flex-col gap-3 mb-8">
-                    <a
-                      href={orderUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/order-menu"
                       className="flex items-center gap-4 px-5 py-4 text-black hover:text-yellow-600 hover:bg-yellow-50 transition-all font-extrabold rounded-xl group shadow-sm hover:shadow-md"
                       onClick={() => setMobileMenuOpen(false)}
                     >
@@ -187,7 +182,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
                         </svg>
                       </div>
                       <span>{t.orderNow}</span>
-                    </a>
+                    </Link>
                     <Link
                       href="/about"
                       className="flex items-center gap-4 px-5 py-4 text-black hover:text-yellow-600 hover:bg-yellow-50 transition-all font-extrabold rounded-xl group shadow-sm hover:shadow-md"

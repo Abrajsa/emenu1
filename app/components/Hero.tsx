@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 interface HeroProps {
   lang: 'ar' | 'en';
@@ -52,10 +53,7 @@ export default function Hero({ lang }: HeroProps) {
           >
             {t.heroText}
           </motion.h1>
-          <motion.a
-            href="https://new-mall.com/onBOBnV"
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
@@ -68,10 +66,14 @@ export default function Hero({ lang }: HeroProps) {
             style={{
               transition: 'none'
             }}
-            className="inline-block mt-4 sm:mt-8 px-8 py-4 sm:px-12 sm:py-5 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black text-base sm:text-lg md:text-xl font-bold rounded-full shadow-2xl cursor-pointer hover:from-yellow-400 hover:to-yellow-300 transition-all duration-300 hover:shadow-yellow-500/50 hover:scale-105"
           >
-            {t.orderNow}
-          </motion.a>
+            <Link
+              href="/order-menu"
+              className="inline-block mt-4 sm:mt-8 px-8 py-4 sm:px-12 sm:py-5 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black text-base sm:text-lg md:text-xl font-bold rounded-full shadow-2xl cursor-pointer hover:from-yellow-400 hover:to-yellow-300 transition-all duration-300 hover:shadow-yellow-500/50 hover:scale-105"
+            >
+              {t.orderNow}
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>
