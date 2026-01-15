@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins, Geist_Mono, Cairo } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -42,6 +43,15 @@ export default function RootLayout({
         className={`${poppins.variable} ${geistMono.variable} ${cairo.variable} antialiased`}
       >
         {children}
+        <Script
+          id="metricool-tracker"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"c8dc9cf269c98d5ade72ab3146f19d88"})});
+            `
+          }}
+        />
       </body>
     </html>
   );
