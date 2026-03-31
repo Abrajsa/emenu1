@@ -4,6 +4,7 @@ import { LanguageProvider, useLanguage } from '../components/LanguageProvider';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function OurWorkContent() {
   const { lang, setLang } = useLanguage();
@@ -81,10 +82,14 @@ function OurWorkContent() {
                 rel="noopener noreferrer"
                 className="block relative overflow-hidden rounded-2xl transition-all duration-300 transform hover:scale-105 group shadow-lg hover:shadow-2xl"
               >
-                <img
+                <Image
                   src={work.imageUrl}
                   alt={lang === 'ar' ? work.nameAr : work.nameEn}
+                  width={640}
+                  height={480}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

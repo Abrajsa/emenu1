@@ -54,9 +54,9 @@ export default function Header({ lang, setLang }: HeaderProps) {
                 sizes="48px"
               />
             </div>
-            <h1 className="text-base sm:text-xl md:text-2xl font-extrabold text-black">
+            <span className="text-base sm:text-xl md:text-2xl font-extrabold text-black">
               {lang === 'ar' ? 'المنيو الالكتروني الاول' : 'The First Electronic Menu'}
-            </h1>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

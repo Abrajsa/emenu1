@@ -4,6 +4,7 @@ import { useState, FormEvent } from 'react';
 import { LanguageProvider, useLanguage } from '../components/LanguageProvider';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Image from 'next/image';
 
 function OrderMenuContent() {
   const { lang, setLang } = useLanguage();
@@ -81,14 +82,17 @@ function OrderMenuContent() {
       <Header lang={lang} setLang={setLang} />
       
       <main 
-        className="w-full py-12 sm:py-16 lg:py-20 relative"
-        style={{
-          backgroundImage: 'url(/back.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
+        className="w-full py-12 sm:py-16 lg:py-20 relative overflow-hidden"
       >
+        <Image
+          src="/back.jpg"
+          alt=""
+          fill
+          priority
+          aria-hidden="true"
+          sizes="100vw"
+          className="object-cover object-center -z-10"
+        />
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Page Title */}

@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 interface MainTextProps {
@@ -30,36 +29,21 @@ export default function MainText({ lang }: MainTextProps) {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <p
             className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed mb-8 font-bold ${
               isRTL ? 'font-arabic' : ''
             }`}
           >
             {t.ctaText}
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            whileHover={{ 
-              scale: 1.1,
-              y: -5,
-              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.2)',
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
+          </p>
+          <div>
             <Link
               href="/order-menu"
               className="inline-block px-10 py-5 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black text-lg sm:text-xl font-bold rounded-full shadow-2xl cursor-pointer hover:from-yellow-400 hover:to-yellow-300 transition-all duration-300 hover:shadow-yellow-500/50 hover:scale-105"
             >
               {t.buttonText}
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -13,9 +13,11 @@ function HomeContent() {
   return (
     <div className={`min-h-screen ${lang === 'ar' ? 'rtl' : 'ltr'}`} style={{ backgroundColor: '#fcfbf6' }} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
       <Header lang={lang} setLang={setLang} />
-      <Hero lang={lang} />
-      <Advantages lang={lang} />
-      <MainText lang={lang} />
+      <main>
+        <Hero lang={lang} />
+        <Advantages lang={lang} />
+        <MainText lang={lang} />
+      </main>
       <Footer lang={lang} />
     </div>
   );

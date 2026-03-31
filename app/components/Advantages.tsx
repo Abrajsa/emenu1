@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 interface AdvantagesProps {
   lang: 'ar' | 'en';
 }
@@ -164,36 +162,21 @@ export default function Advantages({ lang }: AdvantagesProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-12 sm:mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <h2
             className={`text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 ${
               isRTL ? 'font-arabic' : ''
             }`}
           >
             {t.sectionTitle}
-          </motion.h2>
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: 96 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="h-1 bg-yellow-500 mx-auto rounded-full"
-          ></motion.div>
+          </h2>
+          <div className="h-1 bg-yellow-500 mx-auto rounded-full w-24"></div>
         </div>
 
         {/* Advantages Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {advantages.map((advantage, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -8, scale: 1.02 }}
               className="bg-white rounded-xl shadow-md hover:shadow-2xl p-6 sm:p-8 border border-gray-100 hover:border-yellow-300 transition-all duration-300 group relative overflow-hidden"
             >
               {/* Gradient background on hover */}
@@ -223,7 +206,7 @@ export default function Advantages({ lang }: AdvantagesProps) {
               >
                 {advantage.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
